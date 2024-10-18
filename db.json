@@ -1,0 +1,19 @@
+{
+    "categoryName": [
+        "produce",
+        "dairy",
+        "meat & seafood",
+        "pantry",
+        "misc"
+    ],
+    "groceries":[
+        {"id":1,
+        "name":"onion",
+        "category":"produce",
+        "unit":"1",
+        "price":"$3",
+        "store":"Walmart",
+        "notes":"this is an example"
+    }
+    ]
+}
