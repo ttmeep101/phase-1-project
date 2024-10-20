@@ -1,19 +1,35 @@
 {
     "categoryName": [
-        "produce",
-        "dairy",
-        "meat & seafood",
-        "pantry",
-        "misc"
+        {
+            "id": 1, 
+            "name": "Produce"
+        },
+        {
+            "id": 2, 
+            "name": "Dairy"
+        },
+        {
+            "id": 3, 
+            "name": "Meat & Seafood"
+        },
+        {
+            "id": 4, 
+            "name": "Pantry"
+        },
+        {
+            "id": 5, 
+            "name": "Misc"
+        }
     ],
     "groceries":[
-        {"id":1,
-        "name":"onion",
-        "category":"produce",
-        "unit":"1",
-        "price":"$3",
-        "store":"Walmart",
-        "notes":"this is an example"
-    }
+        {
+            "id":20,
+            "name":"onion",
+            "category":"Produce",
+            "unit":"1",
+            "price":"$3.00",
+            "store":"Walmart",
+            "notes":"this is an example"
+        }
     ]
 }
