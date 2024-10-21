@@ -44,12 +44,9 @@ function logSubmit(e) {
         body: JSON.stringify(newObj),
         headers: {"Content-Type": "appllication/json"}
     })
-    e.target.name.value = ''
-    e.target.category.value = ''
-    e.target.unit.value = ''
-    e.target.price.value = '$'
-    e.target.notes.value = ''
-    createNewItem(newObj)
+    .then((resp) => resp.json())
+    .then((groceries) => createNewItem(groceries))
+    e.target.reset()
 }
 
 //creates the listener for the submit button
@@ -64,33 +61,31 @@ const renderItems = () => {
         .then((resp) => resp.json())
         .then((data) => {
             data.forEach((grocery) => {
-                const categoryIdFinder = grocery.category.replaceAll(' ', '-');
-                console.log(categoryIdFinder)
-                const ul = document.getElementById(categoryIdFinder);
-                const newItemLi = document.createElement("li");
-                const nameSpan = document.createElement("span");
-                nameSpan.className = "listItem";
-                nameSpan.textContent = `${grocery.name}`;
-                const notesSpan = document.createElement("span");
-                notesSpan.textContent = `${grocery.notes}`;
-                const unitSpan = document.createElement("span");
-                unitSpan.textContent = `${grocery.unit}`;
-                const priceSpan = document.createElement("span");
-                priceSpan.textContent = `${grocery.price}`;
-                newItemLi.append(nameSpan, unitSpan, notesSpan, priceSpan);
-                ul.append(newItemLi);
+                createNewItem(grocery)
             });
         })
         .catch();
-    // const ul = document.getElementById("produce")
-    // const newItemLi = document.createElement("li")
-    // newItemLi.textContent = `${groceries.name}`
-    // ul.append(newItemLi);
+}
+
+const deleteGroceryItem = (grocery, newItemLi) => {
+    const deleteBtn = document.createElement("button")
+    deleteBtn.id = "delete-btn"
+    deleteBtn.innerText = "Delete Item"
+    newItemLi.append(deleteBtn);
+    deleteBtn.addEventListener("click", () => {
+        newItemLi.remove()
+        deleteItem(grocery.id)
+    })
+}
+function deleteItem(id) {
+    fetch(`${baseURL}/groceries/${id}`, {
+        method: "DELETE",
+    })
+    .then((resp) => resp.json())
 }
 
 function createNewItem(grocery) {
     const categoryIdFinder = grocery.category.replaceAll(' ', '-');
-    console.log(categoryIdFinder)
     const ul = document.getElementById(categoryIdFinder);
     const newItemLi = document.createElement("li");
     const nameSpan = document.createElement("span");
@@ -104,6 +99,7 @@ function createNewItem(grocery) {
     priceSpan.textContent = `${grocery.price}`;
     newItemLi.append(nameSpan, unitSpan, notesSpan, priceSpan);
     ul.append(newItemLi);
+    deleteGroceryItem(grocery, newItemLi);
 }
 
 const main = () => {

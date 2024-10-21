@@ -40,7 +40,7 @@
       "notes": "for the week"
     },
     {
-      "id": "343a",
+      "id": "343b",
       "name": "petfood",
       "category": "Misc",
       "unit": "2",
@@ -62,14 +62,6 @@
       "unit": "1",
       "price": "$4",
       "notes": ""
-    },
-    {
-      "id": "3c59",
-      "name": "test",
-      "category": "Produce",
-      "unit": "3",
-      "price": "$123",
-      "notes": "test"
     }
   ]
 }
