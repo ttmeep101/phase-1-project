@@ -37,7 +37,6 @@ function logSubmit(e) {
         category: e.target.category.value,
         unit: e.target.unit.value,
         price: e.target.price.value,
-        store: e.target.store.value,
         notes: e.target.notes.value
     }
     fetch(`${baseURL}/groceries`, {
@@ -49,7 +48,6 @@ function logSubmit(e) {
     e.target.category.value = ''
     e.target.unit.value = ''
     e.target.price.value = '$'
-    e.target.store.value = ''
     e.target.notes.value = ''
 }
 
