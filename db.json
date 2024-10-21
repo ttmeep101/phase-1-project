@@ -1,35 +1,51 @@
 {
-    "categoryName": [
-        {
-            "id": 1, 
-            "name": "Produce"
-        },
-        {
-            "id": 2, 
-            "name": "Dairy"
-        },
-        {
-            "id": 3, 
-            "name": "Meat & Seafood"
-        },
-        {
-            "id": 4, 
-            "name": "Pantry"
-        },
-        {
-            "id": 5, 
-            "name": "Misc"
-        }
-    ],
-    "groceries":[
-        {
-            "id":20,
-            "name":"onion",
-            "category":"Produce",
-            "unit":"1",
-            "price":"$3.00",
-            "store":"Walmart",
-            "notes":"this is an example"
-        }
-    ]
+  "categoryName": [
+    {
+      "id": "1",
+      "name": "Produce"
+    },
+    {
+      "id": "2",
+      "name": "Dairy"
+    },
+    {
+      "id": "3",
+      "name": "Meat & Seafood"
+    },
+    {
+      "id": "4",
+      "name": "Pantry"
+    },
+    {
+      "id": "5",
+      "name": "Misc"
+    }
+  ],
+  "groceries": [
+    {
+      "id": "20",
+      "name": "onion",
+      "category": "Produce",
+      "unit": "1",
+      "price": "$3.00",
+      "store": "Walmart",
+      "notes": "this is an example"
+    },
+    {
+      "id": "343a",
+      "name": "milk",
+      "category": "Dairy",
+      "unit": "2",
+      "price": "$6",
+      "notes": "for the week"
+    },
+    {
+      "id": "573c",
+      "name": "onion",
+      "category": "Produce",
+      "unit": "8",
+      "price": "$4",
+      "notes": ""
+    }
+  ]
 }

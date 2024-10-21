@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Purple+Purse&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Purple+Purse&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <script defer src="./index.js"></script>
 </head>
 <body>
     <div>
-        <header>
+        <header style="position: relative;">
             <h1>the Grocer</h1>
+            <img src="https://tse4.mm.bing.net/th?id=OIP.qZ22ZrAVSKLRbjX5qyAgigHaEf&pid=Api&P=0&h=220" alt="Grocery Icon" class="header-image">
         </header>
     </div>
     <div>
@@ -22,8 +23,6 @@
             <select id='categoryForm' type="text" name="name" value="" placeholder="Item Category" class="input-item input-select"></select>
             <input id='unitForm' type="number" name="name" value="" placeholder="Unit" class="input-item input-number">
             <input id='priceForm' type="text" name="name" value="$" placeholder="Price" class="input-item input-text">
-            <!-- <input id='storeForm' type="text" name="name" value="" placeholder="Store" class="input-text">   -->
-            <!-- maybe we dont need the store section? -->
             <input id='notesForm' type="text" name="name" value="" placeholder="Notes" class="input-item input-text">
             <input id='submitBtn' type="submit" name="name" value="Submit" class="input-item submit">
         </form>
@@ -36,7 +35,6 @@
             <a href='#category'><li>Dairy</li></a>
             <a href='#unit'><li>Meat & Seafood</li></a>
             <a href='#price'><li>Pantry</li></a>
-            <!-- <a href='#store'><li>Store</li></a> -->
             <a href='#notes'><li>Misc</li></a>
         </ul>
     </div>

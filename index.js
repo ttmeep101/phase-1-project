@@ -19,6 +19,9 @@ const dropdownLoader = () => {
     fetch(`${baseURL}/categoryName`)
         .then((resp) => resp.json())
         .then((data) => {
+
+
+            
             data.forEach((category) => {
                 const option = document.createElement('option');
                 option.innerText = category.name;
