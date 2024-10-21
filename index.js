@@ -37,7 +37,6 @@ function logSubmit(e) {
         category: e.target.category.value,
         unit: e.target.unit.value,
         price: e.target.price.value,
-        store: e.target.store.value,
         notes: e.target.notes.value
     }
     fetch(`${baseURL}/groceries`, {
@@ -49,8 +48,8 @@ function logSubmit(e) {
     e.target.category.value = ''
     e.target.unit.value = ''
     e.target.price.value = '$'
-    e.target.store.value = ''
     e.target.notes.value = ''
+    createNewItem(newObj)
 }
 
 //creates the listener for the submit button
@@ -60,7 +59,7 @@ function addSubmitBtn() {
 }
 
 
-const createNewItem = () => {
+const renderItems = () => {
     fetch(`${baseURL}/groceries`)
         .then((resp) => resp.json())
         .then((data) => {
@@ -89,9 +88,27 @@ const createNewItem = () => {
     // ul.append(newItemLi);
 }
 
+function createNewItem(grocery) {
+    const categoryIdFinder = grocery.category.replaceAll(' ', '-');
+    console.log(categoryIdFinder)
+    const ul = document.getElementById(categoryIdFinder);
+    const newItemLi = document.createElement("li");
+    const nameSpan = document.createElement("span");
+    nameSpan.className = "listItem";
+    nameSpan.textContent = `${grocery.name}`;
+    const notesSpan = document.createElement("span");
+    notesSpan.textContent = `${grocery.notes}`;
+    const unitSpan = document.createElement("span");
+    unitSpan.textContent = `${grocery.unit}`;
+    const priceSpan = document.createElement("span");
+    priceSpan.textContent = `${grocery.price}`;
+    newItemLi.append(nameSpan, unitSpan, notesSpan, priceSpan);
+    ul.append(newItemLi);
+}
+
 const main = () => {
     dropdownLoader();
-    createNewItem();
+    renderItems();
     addSubmitBtn();
 }
 

@@ -62,6 +62,14 @@
       "unit": "1",
       "price": "$4",
       "notes": ""
+    },
+    {
+      "id": "3c59",
+      "name": "test",
+      "category": "Produce",
+      "unit": "3",
+      "price": "$123",
+      "notes": "test"
     }
   ]
 }
