@@ -23,7 +23,7 @@
   ],
   "groceries": [
     {
-      "id": "20",
+      "id": "1",
       "name": "onion",
       "category": "Produce",
       "unit": "1",
@@ -32,7 +32,7 @@
       "notes": "this is an example"
     },
     {
-      "id": "343a",
+      "id": "2",
       "name": "milk",
       "category": "Dairy",
       "unit": "2",
@@ -40,10 +40,26 @@
       "notes": "for the week"
     },
     {
+      "id": "343b",
+      "name": "petfood",
+      "category": "Misc",
+      "unit": "2",
+      "price": "$6",
+      "notes": "for the week"
+    },
+    {
+      "id": "343a",
+      "name": "flour",
+      "category": "Pantry",
+      "unit": "2",
+      "price": "$6",
+      "notes": "for the week"
+    },
+    {
       "id": "573c",
-      "name": "onion",
-      "category": "Produce",
-      "unit": "8",
+      "name": "pork",
+      "category": "Meat and Seafood",
+      "unit": "1",
       "price": "$4",
       "notes": ""
     }
