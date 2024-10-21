@@ -23,7 +23,7 @@
   ],
   "groceries": [
     {
-      "id": "20",
+      "id": "1",
       "name": "onion",
       "category": "Produce",
       "unit": "1",
@@ -32,7 +32,7 @@
       "notes": "this is an example"
     },
     {
-      "id": "343a",
+      "id": "2",
       "name": "milk",
       "category": "Dairy",
       "unit": "2",
