@@ -10,7 +10,7 @@
     },
     {
       "id": "3",
-      "name": "Meat & Seafood"
+      "name": "Meat and Seafood"
     },
     {
       "id": "4",
@@ -22,23 +22,6 @@
     }
   ],
   "groceries": [
-    {
-      "id": "1",
-      "name": "onion",
-      "category": "Produce",
-      "unit": "1",
-      "price": "$3.00",
-      "store": "Walmart",
-      "notes": "this is an example"
-    },
-    {
-      "id": "2",
-      "name": "milk",
-      "category": "Dairy",
-      "unit": "2",
-      "price": "$6",
-      "notes": "for the week"
-    },
     {
       "id": "343a",
       "name": "petfood",
@@ -56,12 +39,12 @@
       "notes": "for the week"
     },
     {
-      "id": "573c",
-      "name": "pork",
-      "category": "Meat and Seafood",
-      "unit": "1",
-      "price": "$4",
-      "notes": ""
+      "name": "Carrot",
+      "category": "Produce",
+      "unit": "13",
+      "price": "$12",
+      "notes": "Organic",
+      "id": "5976"
     }
   ]
 }

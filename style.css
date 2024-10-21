@@ -52,7 +52,7 @@ h1 {
 }
 
 /* Button Styles */
-#addItemBtn, #submitBtn {
+#addItemBtn, #submitBtn, #editSubmitBtn {
     font-size: 20px; 
     color: #ffffff; 
     background-color: #264348; 
