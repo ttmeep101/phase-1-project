@@ -33,7 +33,6 @@ const dropdownLoader = () => {
 function logSubmit(e) {
     e.preventDefault()
     const newObj = {
-        id: Math.floor(Math.random() * 1000),
         name: e.target.name.value,
         category: e.target.category.value,
         unit: e.target.unit.value,
