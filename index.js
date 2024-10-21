@@ -34,7 +34,10 @@ const dropdownLoader = () => {
                 option.innerText = category.name;
                 option.value = category.name;
                 select.append(option);
-                editSelect.append(option)
+                const editOption = document.createElement('option');
+                editOption.innerText = category.name;
+                editOption.value = category.name;
+                editSelect.append(editOption);
             });
         })
         .catch();
@@ -59,7 +62,6 @@ const logSubmit =  function(e) {
     .then((groceries) => createNewItem(groceries))
     e.target.reset()
 }
-
 
 //creates the listener for the submit button
 function addSubmitBtn() {
@@ -126,6 +128,7 @@ const deleteGroceryItem = (grocery, newItemLi) => {
         deleteItem(grocery.id)
     })
 }
+
 function deleteItem(id) {
     fetch(`${baseURL}/groceries/${id}`, {
         method: "DELETE",
@@ -146,6 +149,7 @@ function createNewItem(grocery) {
     unitSpan.textContent = `${grocery.unit}`;
     const priceSpan = document.createElement("span");
     priceSpan.textContent = `${grocery.price}`;
+    const editBtn = document.createElement('button')
     editBtn.textContent = 'Edit'
     editBtn.addEventListener('click', (e) => editItem(grocery))
     newItemLi.append(nameSpan, unitSpan, notesSpan, priceSpan, editBtn);

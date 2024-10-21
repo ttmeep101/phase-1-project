@@ -23,15 +23,6 @@
   ],
   "groceries": [
     {
-      "id": "1",
-      "name": "onion",
-      "category": "Produce",
-      "unit": "1",
-      "price": "$3.00",
-      "store": "Walmart",
-      "notes": "this is an example"
-    },
-    {
       "id": "2",
       "name": "milk",
       "category": "Dairy",
@@ -58,7 +49,7 @@
     {
       "name": "Carrot",
       "category": "Produce",
-      "unit": "13",
+      "unit": "12",
       "price": "$12",
       "notes": "Organic",
       "id": "5976"
