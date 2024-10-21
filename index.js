@@ -55,8 +55,9 @@ const logSubmit =  function(e) {
         body: JSON.stringify(newObj),
         headers: {"Content-Type": "appllication/json"}
     })
+    .then((resp) => resp.json())
+    .then((groceries) => createNewItem(groceries))
     e.target.reset()
-    console.log('submit logged')
 }
 
 
@@ -104,42 +105,58 @@ function editItem(grocery) {
     form.addEventListener('submit', (e) => logEdit(e, grocery))
 }
 
-const createNewItem = () => {
+const renderItems = () => {
     fetch(`${baseURL}/groceries`)
         .then((resp) => resp.json())
         .then((data) => {
             data.forEach((grocery) => {
-                const categoryIdFinder = grocery.category.replaceAll(' ', '-');
-                //console.log(categoryIdFinder)
-                const ul = document.getElementById(categoryIdFinder);
-                const newItemLi = document.createElement("li");
-                const nameSpan = document.createElement("span");
-                nameSpan.className = "listItem";
-                nameSpan.textContent = `${grocery.name}`;
-                const notesSpan = document.createElement("span");
-                notesSpan.textContent = `${grocery.notes}`;
-                const unitSpan = document.createElement("span");
-                unitSpan.textContent = `${grocery.unit}`;
-                const priceSpan = document.createElement("span");
-                priceSpan.textContent = `${grocery.price}`;
-                const editBtn = document.createElement('button')
-                editBtn.textContent = 'Edit'
-                editBtn.addEventListener('click', (e) => editItem(grocery))
-                newItemLi.append(nameSpan, unitSpan, notesSpan, priceSpan, editBtn);
-                ul.append(newItemLi);
+                createNewItem(grocery)
             });
         })
         .catch();
-    // const ul = document.getElementById("produce")
-    // const newItemLi = document.createElement("li")
-    // newItemLi.textContent = `${groceries.name}`
-    // ul.append(newItemLi);
+}
+
+const deleteGroceryItem = (grocery, newItemLi) => {
+    const deleteBtn = document.createElement("button")
+    deleteBtn.id = "delete-btn"
+    deleteBtn.innerText = "Delete Item"
+    newItemLi.append(deleteBtn);
+    deleteBtn.addEventListener("click", () => {
+        newItemLi.remove()
+        deleteItem(grocery.id)
+    })
+}
+function deleteItem(id) {
+    fetch(`${baseURL}/groceries/${id}`, {
+        method: "DELETE",
+    })
+    .then((resp) => resp.json())
+}
+
+function createNewItem(grocery) {
+    const categoryIdFinder = grocery.category.replaceAll(' ', '-');
+    const ul = document.getElementById(categoryIdFinder);
+    const newItemLi = document.createElement("li");
+    const nameSpan = document.createElement("span");
+    nameSpan.className = "listItem";
+    nameSpan.textContent = `${grocery.name}`;
+    const notesSpan = document.createElement("span");
+    notesSpan.textContent = `${grocery.notes}`;
+    const unitSpan = document.createElement("span");
+    unitSpan.textContent = `${grocery.unit}`;
+    const priceSpan = document.createElement("span");
+    priceSpan.textContent = `${grocery.price}`;
+    editBtn.textContent = 'Edit'
+    editBtn.addEventListener('click', (e) => editItem(grocery))
+    newItemLi.append(nameSpan, unitSpan, notesSpan, priceSpan, editBtn);
+    ul.append(newItemLi);
+    deleteGroceryItem(grocery, newItemLi);
 }
 
 const main = () => {
     openForm();
     dropdownLoader();
-    createNewItem();
+    renderItems();
 }
 
 document.addEventListener('DOMContentLoaded', main())

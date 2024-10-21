@@ -23,7 +23,24 @@
   ],
   "groceries": [
     {
-      "id": "343a",
+      "id": "1",
+      "name": "onion",
+      "category": "Produce",
+      "unit": "1",
+      "price": "$3.00",
+      "store": "Walmart",
+      "notes": "this is an example"
+    },
+    {
+      "id": "2",
+      "name": "milk",
+      "category": "Dairy",
+      "unit": "2",
+      "price": "$6",
+      "notes": "for the week"
+    },
+    {
+      "id": "343b",
       "name": "petfood",
       "category": "Misc",
       "unit": "2",
