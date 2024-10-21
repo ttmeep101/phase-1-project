@@ -40,10 +40,26 @@
       "notes": "for the week"
     },
     {
+      "id": "343a",
+      "name": "petfood",
+      "category": "Misc",
+      "unit": "2",
+      "price": "$6",
+      "notes": "for the week"
+    },
+    {
+      "id": "343a",
+      "name": "flour",
+      "category": "Pantry",
+      "unit": "2",
+      "price": "$6",
+      "notes": "for the week"
+    },
+    {
       "id": "573c",
-      "name": "onion",
-      "category": "Produce",
-      "unit": "8",
+      "name": "pork",
+      "category": "Meat and Seafood",
+      "unit": "1",
       "price": "$4",
       "notes": ""
     }

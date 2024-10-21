@@ -93,12 +93,17 @@ h2 {
     margin: 20px 0; 
 }
 
-#list li {
+#list ul {
     background-color: #e9f5f5; 
     border: 1px solid #c0c0c0; 
     border-radius: 5px; 
     padding: 10px; 
     margin-bottom: 10px;
+    font-size: 20px;
+}
+#list li {
+    display: flex;
+    gap: 40px;
 }
 
 /* Responsive Design */
