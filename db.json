@@ -23,62 +23,12 @@
   ],
   "groceries": [
     {
-      "id": "4b2e",
-      "name": "chicken",
-      "category": "Meat & Seafood",
-      "unit": "2",
-      "price": "$9",
-      "notes": "note"
-    },
-    {
-      "id": "127b",
-      "name": "onion",
-      "category": "Produce",
-      "unit": "2",
-      "price": "$4",
-      "notes": "for the week"
-    },
-    {
-      "id": "5249",
-      "name": "milk",
-      "category": "Dairy",
-      "unit": "6",
-      "price": "$5",
-      "notes": "notes"
-    },
-    {
-      "id": "343b",
-      "name": "petfood",
-      "category": "Misc",
-      "unit": "2",
-      "price": "$6",
-      "notes": "for the week",
-      "id": "343b"
-    },
-    {
-      "name": "Flour",
-      "category": "Pantry",
-      "unit": "3",
-      "price": "$6",
-      "notes": "for the week",
-      "id": "343a"
-    },
-    {
+      "id": "78ce",
       "name": "Carrot",
       "category": "Produce",
-      "unit": "3",
-      "price": "$12",
-      "notes": "expensive",
-      "id": "a93b"
-    },
-    {
-      "name": "Steak",
-      "category": "Meat and Seafood",
       "unit": "1",
       "price": "$12",
-      "notes": "",
-      "id": "523a"
+      "notes": "test"
     }
   ]
 }
-
