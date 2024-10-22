@@ -53,6 +53,14 @@
       "price": "$12",
       "notes": "Organic",
       "id": "5976"
+    },
+    {
+      "name": "Steak",
+      "category": "Meat and Seafood",
+      "unit": "1",
+      "price": "$12",
+      "notes": "meaty",
+      "id": "713d"
     }
   ]
 }
