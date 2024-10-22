@@ -23,14 +23,6 @@
   ],
   "groceries": [
     {
-      "id": "2",
-      "name": "milk",
-      "category": "Dairy",
-      "unit": "2",
-      "price": "$6",
-      "notes": "for the week"
-    },
-    {
       "id": "343b",
       "name": "petfood",
       "category": "Misc",
@@ -39,28 +31,12 @@
       "notes": "for the week"
     },
     {
-      "id": "343a",
       "name": "flour",
-      "category": "Pantry",
-      "unit": "2",
+      "category": "Dairy",
+      "unit": "3",
       "price": "$6",
-      "notes": "for the week"
-    },
-    {
-      "name": "Carrot",
-      "category": "Produce",
-      "unit": "12",
-      "price": "$12",
-      "notes": "Organic",
-      "id": "5976"
-    },
-    {
-      "name": "Steak",
-      "category": "Meat and Seafood",
-      "unit": "1",
-      "price": "$12",
-      "notes": "meaty",
-      "id": "713d"
+      "notes": "for the week",
+      "id": "343a"
     }
   ]
 }
