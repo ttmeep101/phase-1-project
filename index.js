@@ -57,7 +57,8 @@ const logSubmit =  function(e) {
         category: e.target.category.value,
         unit: e.target.unit.value,
         price: e.target.price.value,
-        notes: e.target.notes.value
+        notes: e.target.notes.value,
+        isStriked: false,
     }
     fetch(`${baseURL}/groceries`, {
         method: "POST",
@@ -85,8 +86,9 @@ const logEdit = function(e, grocery, itemLi){
         category: e.target.category.value,
         unit: e.target.unit.value,
         price: e.target.price.value,
-        notes: e.target.notes.value
-    }
+        notes: e.target.notes.value,
+        isStriked: grocery.isStriked,
+    };
     fetch(`${baseURL}/groceries/${grocery.id}`, {
         method: 'PUT',
         headers: {'Content-Type': "application/json", "Accept": "application/json"},
@@ -155,6 +157,20 @@ function deleteItem(id) {
         method: "DELETE",
     })
     .then((resp) => resp.json())
+    .then(() => {});
+}
+
+function patchItem(grocery) {
+    fetch(`${baseURL}/groceries/${grocery.id}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        },
+        body: JSON.stringify(grocery)
+    })
+    .then((resp) => resp.json())
+    .then(() => {});
 }
 
 function editItemBtn(grocery, newItemLi) {
@@ -176,7 +192,14 @@ function createNewItem(grocery) {
     nameSpan.id = 'nameId'
     nameSpan.textContent = `${grocery.name}`;
     // added a strikethrough option
-    nameSpan.addEventListener("click", () => { nameSpan.classList.toggle("strikeName")})
+    if (grocery.isStriked) {
+        nameSpan.classList.add("strikeName");
+    }
+    nameSpan.addEventListener("click", () => {
+        nameSpan.classList.toggle("strikeName");
+        grocery.isStriked = !grocery.isStriked;
+        patchItem(grocery);
+    });
     const notesSpan = document.createElement("span");
     notesSpan.className = 'notesSpan';
     notesSpan.textContent = `${grocery.notes}`;

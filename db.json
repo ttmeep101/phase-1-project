@@ -28,7 +28,8 @@
       "category": "Meat and Seafood",
       "unit": "2",
       "price": "$9",
-      "notes": "note"
+      "notes": "note",
+      "isStriked": false
     },
     {
       "id": "127b",
@@ -36,7 +37,8 @@
       "category": "Produce",
       "unit": "2",
       "price": "$4",
-      "notes": "for the week"
+      "notes": "for the week",
+      "isStriked": false
     },
     {
       "id": "5249",
@@ -44,7 +46,8 @@
       "category": "Dairy",
       "unit": "6",
       "price": "$5",
-      "notes": "notes"
+      "notes": "notes",
+      "isStriked": false
     },
     {
       "id": "343b",
@@ -52,7 +55,8 @@
       "category": "Misc",
       "unit": "2",
       "price": "$6",
-      "notes": "for the week"
+      "notes": "for the week",
+      "isStriked": false
     },
     {
       "id": "343c",
@@ -60,7 +64,8 @@
       "category": "Pantry",
       "unit": "3",
       "price": "$6",
-      "notes": "for the week"
+      "notes": "for the week",
+      "isStriked": false
     },
     {
       "id": "a93b",
@@ -68,7 +73,8 @@
       "category": "Produce",
       "unit": "3",
       "price": "$12",
-      "notes": "expensive"
+      "notes": "expensive",
+      "isStriked": false
     },
     {
       "name": "Steak",
@@ -76,7 +82,8 @@
       "unit": "1",
       "price": "$12",
       "notes": "tbone",
-      "id": "523a"
+      "id": "523a",
+      "isStriked": false
     },
     {
       "name": "blueberry",
@@ -84,15 +91,17 @@
       "unit": "1",
       "price": "$3",
       "notes": "organic",
-      "id": "103b"
+      "id": "103b",
+      "isStriked": false
     },
     {
-      "id": "c7cb",
-      "name": "garlic",
-      "category": "Produce",
+      "name": "Chicken",
+      "category": "Meat and Seafood",
       "unit": "1",
       "price": "$2",
-      "notes": "bunch"
+      "notes": "bunch",
+      "isStriked": false,
+      "id": "c7cb"
     }
   ]
 }
