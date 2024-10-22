@@ -63,6 +63,9 @@ const logSubmit =  function(e) {
     .then((resp) => resp.json())
     .then((groceries) => createNewItem(groceries))
     e.target.reset()
+    newItemContainer.style.display = 'none'
+    addItemBtn.innerText = 'Add new item'
+    shouldOpenAddItemForm = true
 }
 
 //creates the listener for the submit button
@@ -88,6 +91,7 @@ const logEdit = function(e, grocery, itemLi){
     .then((data) => {
         itemLi.remove()
         createNewItem(data)
+        totalCost()
         editItemContainer.style.display = 'none'
         addItemBtn.innerText = 'Add new item'
         shouldOpenAddItemForm = true
@@ -95,7 +99,6 @@ const logEdit = function(e, grocery, itemLi){
 }
 
 function editItem(grocery, itemLi) {
-    addItem = true
     newItemContainer.style.display = "none";
     editItemContainer.style.display = 'flex';
     addItemBtn.innerText = 'Close Form';
@@ -139,6 +142,7 @@ const deleteGroceryItem = (grocery, newItemLi) => {
     deleteBtn.addEventListener("click", () => {
         newItemLi.remove()
         deleteItem(grocery.id)
+        totalCost()
     })
 }
 
@@ -156,6 +160,7 @@ function editItemBtn(grocery, newItemLi) {
     editBtn.addEventListener('click', (e) => editItem(grocery, newItemLi))
     newItemLi.append(editBtn)
 }
+
 function createNewItem(grocery) {
     const categoryIdFinder = grocery.category.replaceAll(' ', '-');
     const ul = document.getElementById(categoryIdFinder);
@@ -178,12 +183,29 @@ function createNewItem(grocery) {
     ul.append(newItemLi);
     editItemBtn(grocery, newItemLi)
     deleteGroceryItem(grocery, newItemLi);
+    totalCost()
+}
+
+function totalCost(){
+    const costDisplay = document.getElementById('totalCost')
+    let totalCost = 0
+    fetch(`${baseURL}/groceries`).then((resp) => resp.json()).then((data) => {
+        for(keys in data){
+            let cost = data[keys].price.slice(1)
+            cost = parseFloat(cost)
+            if(cost > 0) {
+                totalCost += cost
+            }
+        }
+        costDisplay.textContent = `Total Cost: $${totalCost}`
+    })
 }
 
 const main = () => {
     openForm();
     dropdownLoader();
     renderItems();
+    totalCost();
 }
 
 document.addEventListener('DOMContentLoaded', main())
