@@ -10,7 +10,7 @@
     },
     {
       "id": "3",
-      "name": "Meat & Seafood"
+      "name": "Meat and Seafood"
     },
     {
       "id": "4",
@@ -25,7 +25,7 @@
     {
       "id": "4b2e",
       "name": "chicken",
-      "category": "Meat & Seafood",
+      "category": "Meat and Seafood",
       "unit": "2",
       "price": "$9",
       "notes": "note"
@@ -71,12 +71,28 @@
       "notes": "expensive"
     },
     {
-      "id": "523a",
       "name": "Steak",
-      "category": "Meat & Seafood",
+      "category": "Meat and Seafood",
       "unit": "1",
       "price": "$12",
-      "notes": ""
+      "notes": "tbone",
+      "id": "523a"
+    },
+    {
+      "name": "blueberry",
+      "category": "Produce",
+      "unit": "1",
+      "price": "$3",
+      "notes": "organic",
+      "id": "103b"
+    },
+    {
+      "id": "c7cb",
+      "name": "garlic",
+      "category": "Produce",
+      "unit": "1",
+      "price": "$2",
+      "notes": "bunch"
     }
   ]
 }

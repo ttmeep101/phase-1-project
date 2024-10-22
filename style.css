@@ -109,6 +109,10 @@ h2 {
     gap: 40px;
 }
 
+.strikeName {
+    text-decoration: line-through;
+}
+
 #totalCost {
     text-align:right;
     margin-right: 20%;

@@ -6,6 +6,10 @@ const newItemContainer = document.getElementById("add-grocery")
 const editItemContainer = document.getElementById('edit-grocery')
 let shouldOpenAddItemForm = true;
 
+// we are using verbatim "Meat and Seafood"
+// our code is case sensitive
+// we do not use and ampersand "&"
+
 function openForm(){
     addItemBtn.addEventListener("click", () => {
         document.getElementById('add-grocery').reset()
@@ -137,7 +141,7 @@ const renderItems = () => {
 const deleteGroceryItem = (grocery, newItemLi) => {
     const deleteBtn = document.createElement("button")
     deleteBtn.id = "delete-btn"
-    deleteBtn.innerText = "Delete Item"
+    deleteBtn.innerText = "Delete"
     newItemLi.append(deleteBtn);
     deleteBtn.addEventListener("click", () => {
         newItemLi.remove()
@@ -161,6 +165,7 @@ function editItemBtn(grocery, newItemLi) {
     newItemLi.append(editBtn)
 }
 
+
 function createNewItem(grocery) {
     const categoryIdFinder = grocery.category.replaceAll(' ', '-');
     const ul = document.getElementById(categoryIdFinder);
@@ -170,6 +175,8 @@ function createNewItem(grocery) {
     nameSpan.className = 'nameSpan';
     nameSpan.id = 'nameId'
     nameSpan.textContent = `${grocery.name}`;
+    // added a strikethrough option
+    nameSpan.addEventListener("click", () => { nameSpan.classList.toggle("strikeName")})
     const notesSpan = document.createElement("span");
     notesSpan.className = 'notesSpan';
     notesSpan.textContent = `${grocery.notes}`;
