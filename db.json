@@ -95,19 +95,11 @@
       "notes": "for the week"
     },
     {
-      "id": "343b",
-      "name": "petfood",
-      "category": "Misc",
+      "id": "b4c1",
+      "name": "onion",
+      "category": "Produce",
       "unit": "2",
-      "price": "$6",
-      "notes": "for the week"
-    },
-    {
-      "id": "343a",
-      "name": "flour",
-      "category": "Dairy",
-      "unit": "3",
-      "price": "$6",
+      "price": "$9",
       "notes": "for the week"
     }
   ]
