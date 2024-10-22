@@ -23,6 +23,7 @@
   ],
   "groceries": [
     {
+<<<<<<< HEAD
       "id": "4b2e",
       "name": "chicken",
       "category": "Meat & Seafood",
@@ -95,4 +96,23 @@
       "notes": "for the week"
     }
   ]
+=======
+      "id": "343b",
+      "name": "petfood",
+      "category": "Misc",
+      "unit": "2",
+      "price": "$6",
+      "notes": "for the week"
+    },
+    {
+      "name": "flour",
+      "category": "Dairy",
+      "unit": "3",
+      "price": "$6",
+      "notes": "for the week",
+      "id": "343a"
+    }
+  ]
+
+>>>>>>> 47ac8b4822225d6ebe2e6904ad2b0b9448a8c0fa
 }
