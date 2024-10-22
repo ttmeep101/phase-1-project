@@ -58,7 +58,7 @@ const logSubmit =  function(e) {
     fetch(`${baseURL}/groceries`, {
         method: "POST",
         body: JSON.stringify(newObj),
-        headers: {"Content-Type": "appllication/json"}
+        headers: {"Content-Type": "application/json", "Accept": "application/json"}
     })
     .then((resp) => resp.json())
     .then((groceries) => createNewItem(groceries))
@@ -82,12 +82,15 @@ const logEdit = function(e, grocery, itemLi){
     }
     fetch(`${baseURL}/groceries/${grocery.id}`, {
         method: 'PUT',
-        headers: {'Content-Type': "application/json"},
+        headers: {'Content-Type': "application/json", "Accept": "application/json"},
         body: JSON.stringify(newObj)
     }).then((res) => res.json())
     .then((data) => {
-        itemLi.remove();
-        createNewItem(data);
+        itemLi.remove()
+        createNewItem(data)
+        editItemContainer.style.display = 'none'
+        addItemBtn.innerText = 'Add new item'
+        shouldOpenAddItemForm = true
     })
 }
 
@@ -114,7 +117,7 @@ function editItem(grocery, itemLi) {
     // Had to add once: true here because each time editItem was called it was adding
     // the submit listener again and running multiple times
     // once: true tells it to only run once
-    form.addEventListener('submit', (e) => logEdit(e, grocery, itemLi), { once: true });
+    form.addEventListener('submit', (e) => logEdit(e, grocery, itemLi), {once:true});
 }
 
 const renderItems = () => {
@@ -146,6 +149,13 @@ function deleteItem(id) {
     .then((resp) => resp.json())
 }
 
+function editItemBtn(grocery, newItemLi) {
+    const editBtn = document.createElement('button')
+    editBtn.textContent = 'Edit'
+    editBtn.className = 'editBtn';
+    editBtn.addEventListener('click', (e) => editItem(grocery, newItemLi))
+    newItemLi.append(editBtn)
+}
 function createNewItem(grocery) {
     const categoryIdFinder = grocery.category.replaceAll(' ', '-');
     const ul = document.getElementById(categoryIdFinder);
@@ -153,6 +163,7 @@ function createNewItem(grocery) {
     newItemLi.className = "listItem";
     const nameSpan = document.createElement("span");
     nameSpan.className = 'nameSpan';
+    nameSpan.id = 'nameId'
     nameSpan.textContent = `${grocery.name}`;
     const notesSpan = document.createElement("span");
     notesSpan.className = 'notesSpan';
@@ -163,12 +174,9 @@ function createNewItem(grocery) {
     const priceSpan = document.createElement("span");
     priceSpan.textContent = `${grocery.price}`;
     priceSpan.className = 'priceSpan';
-    const editBtn = document.createElement('button')
-    editBtn.textContent = 'Edit'
-    editBtn.className = 'editBtn';
-    editBtn.addEventListener('click', (e) => editItem(grocery, newItemLi))
-    newItemLi.append(nameSpan, unitSpan, notesSpan, priceSpan, editBtn);
+    newItemLi.append(nameSpan, unitSpan, notesSpan, priceSpan);
     ul.append(newItemLi);
+    editItemBtn(grocery, newItemLi)
     deleteGroceryItem(grocery, newItemLi);
 }
 
