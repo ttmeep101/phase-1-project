@@ -52,32 +52,31 @@
       "category": "Misc",
       "unit": "2",
       "price": "$6",
-      "notes": "for the week",
-      "id": "343b"
+      "notes": "for the week"
     },
     {
+      "id": "343c",
       "name": "Flour",
       "category": "Pantry",
       "unit": "3",
       "price": "$6",
-      "notes": "for the week",
-      "id": "343a"
+      "notes": "for the week"
     },
     {
+      "id": "a93b",
       "name": "Carrot",
       "category": "Produce",
       "unit": "3",
       "price": "$12",
-      "notes": "expensive",
-      "id": "a93b"
+      "notes": "expensive"
     },
     {
+      "id": "523a",
       "name": "Steak",
-      "category": "Meat and Seafood",
+      "category": "Meat & Seafood",
       "unit": "1",
       "price": "$12",
-      "notes": "",
-      "id": "523a"
+      "notes": ""
     }
   ]
 }
