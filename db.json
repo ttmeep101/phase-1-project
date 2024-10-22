@@ -10,7 +10,7 @@
     },
     {
       "id": "3",
-      "name": "Meat & Seafood"
+      "name": "Meat and Seafood"
     },
     {
       "id": "4",
@@ -23,21 +23,44 @@
   ],
   "groceries": [
     {
-      "id": "343b",
-      "name": "petfood",
+      "name": "Petfood",
       "category": "Misc",
       "unit": "2",
       "price": "$6",
-      "notes": "for the week"
+      "notes": "for the week",
+      "id": "343b"
     },
     {
-      "name": "flour",
-      "category": "Dairy",
+      "name": "Flour",
+      "category": "Pantry",
       "unit": "3",
       "price": "$6",
       "notes": "for the week",
       "id": "343a"
+    },
+    {
+      "name": "Carrot",
+      "category": "Produce",
+      "unit": "3",
+      "price": "$12",
+      "notes": "expensive",
+      "id": "a93b"
+    },
+    {
+      "id": "e2a9",
+      "name": "Milk",
+      "category": "Dairy",
+      "unit": "1",
+      "price": "$4",
+      "notes": "1 gal"
+    },
+    {
+      "name": "Steak",
+      "category": "Meat and Seafood",
+      "unit": "1",
+      "price": "$12",
+      "notes": "",
+      "id": "523a"
     }
   ]
-
 }
