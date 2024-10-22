@@ -4,23 +4,25 @@ const editSelect = document.getElementById('categoryEdit')
 const addItemBtn = document.getElementById("addItemBtn");
 const newItemContainer = document.getElementById("add-grocery")
 const editItemContainer = document.getElementById('edit-grocery')
-let addItemToggle = false
+let shouldOpenAddItemForm = true;
 
 function openForm(){
     addItemBtn.addEventListener("click", () => {
         document.getElementById('add-grocery').reset()
-        if(editItemContainer.style.display ='none' === true){
-            addItemToggle = false
-        }
-        if (!addItemToggle) {
-            editItemContainer.style.display ='none'
-            newItemContainer.style.display = "flex";
+        if (addItemBtn.innerText === 'Close Form') {
+            editItemContainer.style.display = 'none';
+            newItemContainer.style.display = 'none';
+            addItemBtn.innerText = 'Add new item';
+            shouldOpenAddItemForm = true;
+        } else if (shouldOpenAddItemForm) {
+            editItemContainer.style.display = 'none';
+            newItemContainer.style.display = 'flex';
             addItemBtn.innerText = 'Close Form';
         } else {
-            newItemContainer.style.display = "none";
-            addItemBtn.innerText = 'Add new item';
+            editItemContainer.style.display = 'flex';
+            newItemContainer.style.display = 'none';
+            addItemBtn.innerText = 'Close Form';
         }
-        addItemToggle = !addItemToggle
         addSubmitBtn();
     })
 }
@@ -69,7 +71,7 @@ function addSubmitBtn() {
     form.addEventListener('submit', logSubmit)
 }
 
-const logEdit = function(e, grocery){
+const logEdit = function(e, grocery, itemLi){
     e.preventDefault()
     const newObj = {
         name: e.target.name.value,
@@ -83,14 +85,19 @@ const logEdit = function(e, grocery){
         headers: {'Content-Type': "application/json"},
         body: JSON.stringify(newObj)
     }).then((res) => res.json())
-    .then((data) => console.log(data))
-    console.log('edit logged')
+    .then((data) => {
+        itemLi.remove();
+        createNewItem(data);
+    })
 }
 
-function editItem(grocery) {
+function editItem(grocery, itemLi) {
     addItem = true
     newItemContainer.style.display = "none";
-    editItemContainer.style.display = 'flex'
+    editItemContainer.style.display = 'flex';
+    addItemBtn.innerText = 'Close Form';
+    // Don't show the add item grocery form, instead show the edit one
+    shouldOpenAddItemForm = false;
     document.getElementById('editSubmitBtn').innerText = 'Submit Changes'
     const name = document.getElementById('nameEdit')
     const category = document.getElementById('categoryEdit')
@@ -103,8 +110,11 @@ function editItem(grocery) {
     price.value = `${grocery.price}`
     notes.value = `${grocery.notes}`
     const id = grocery.id
-    const form = document.getElementById('edit-grocery')
-    form.addEventListener('submit', (e) => logEdit(e, grocery))
+    const form = document.getElementById('edit-grocery');
+    // Had to add once: true here because each time editItem was called it was adding
+    // the submit listener again and running multiple times
+    // once: true tells it to only run once
+    form.addEventListener('submit', (e) => logEdit(e, grocery, itemLi), { once: true });
 }
 
 const renderItems = () => {
@@ -140,18 +150,23 @@ function createNewItem(grocery) {
     const categoryIdFinder = grocery.category.replaceAll(' ', '-');
     const ul = document.getElementById(categoryIdFinder);
     const newItemLi = document.createElement("li");
+    newItemLi.className = "listItem";
     const nameSpan = document.createElement("span");
-    nameSpan.className = "listItem";
+    nameSpan.className = 'nameSpan';
     nameSpan.textContent = `${grocery.name}`;
     const notesSpan = document.createElement("span");
+    notesSpan.className = 'notesSpan';
     notesSpan.textContent = `${grocery.notes}`;
     const unitSpan = document.createElement("span");
+    unitSpan.className = 'unitSpan';
     unitSpan.textContent = `${grocery.unit}`;
     const priceSpan = document.createElement("span");
     priceSpan.textContent = `${grocery.price}`;
+    priceSpan.className = 'priceSpan';
     const editBtn = document.createElement('button')
     editBtn.textContent = 'Edit'
-    editBtn.addEventListener('click', (e) => editItem(grocery))
+    editBtn.className = 'editBtn';
+    editBtn.addEventListener('click', (e) => editItem(grocery, newItemLi))
     newItemLi.append(nameSpan, unitSpan, notesSpan, priceSpan, editBtn);
     ul.append(newItemLi);
     deleteGroceryItem(grocery, newItemLi);
