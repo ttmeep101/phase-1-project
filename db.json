@@ -10,7 +10,7 @@
     },
     {
       "id": "3",
-      "name": "Meat & Seafood"
+      "name": "Meat and Seafood"
     },
     {
       "id": "4",
@@ -31,44 +31,12 @@
       "notes": "note"
     },
     {
-      "id": "282a",
-      "name": "chicken",
-      "category": "Meat & Seafood",
-      "unit": "4",
-      "price": "$11",
-      "notes": "notes"
-    },
-    {
-      "id": "80b3",
-      "name": "woody",
-      "category": "Pantry",
-      "unit": "11",
-      "price": "$23",
-      "notes": ""
-    },
-    {
-      "id": "c2fb",
-      "name": "woody",
-      "category": "Pantry",
-      "unit": "4",
-      "price": "$11",
-      "notes": "notes"
-    },
-    {
       "id": "127b",
       "name": "onion",
       "category": "Produce",
       "unit": "2",
       "price": "$4",
       "notes": "for the week"
-    },
-    {
-      "id": "5211",
-      "name": "onion",
-      "category": "Produce",
-      "unit": "1",
-      "price": "$2",
-      "notes": "notes"
     },
     {
       "id": "5249",
@@ -79,36 +47,38 @@
       "notes": "notes"
     },
     {
-      "id": "1ce2",
-      "name": "onion",
-      "category": "Produce",
-      "unit": "2",
-      "price": "$5",
-      "notes": "for the week"
-    },
-    {
-      "id": "598c",
-      "name": "onion",
-      "category": "Produce",
-      "unit": "1",
-      "price": "$3",
-      "notes": "for the week"
-    },
-    {
       "id": "343b",
       "name": "petfood",
       "category": "Misc",
       "unit": "2",
       "price": "$6",
-      "notes": "for the week"
+      "notes": "for the week",
+      "id": "343b"
     },
     {
-      "id": "343a",
-      "name": "flour",
-      "category": "Dairy",
+      "name": "Flour",
+      "category": "Pantry",
       "unit": "3",
       "price": "$6",
-      "notes": "for the week"
+      "notes": "for the week",
+      "id": "343a"
+    },
+    {
+      "name": "Carrot",
+      "category": "Produce",
+      "unit": "3",
+      "price": "$12",
+      "notes": "expensive",
+      "id": "a93b"
+    },
+    {
+      "name": "Steak",
+      "category": "Meat and Seafood",
+      "unit": "1",
+      "price": "$12",
+      "notes": "",
+      "id": "523a"
     }
   ]
 }
+

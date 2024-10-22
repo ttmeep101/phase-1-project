@@ -109,6 +109,11 @@ h2 {
     gap: 40px;
 }
 
+#totalCost {
+    text-align:right;
+    margin-right: 20%;
+}
+
 /* Responsive Design */
 @media (max-width: 600px) {
     h1 {
