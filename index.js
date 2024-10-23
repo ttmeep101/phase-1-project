@@ -226,7 +226,7 @@ function totalCost(){
                 totalCost.push(cost)
             }
         }
-        costDisplay.textContent = `Total Cost: $${totalCost.reduce((acc, curVal) => acc + curVal)}`
+        costDisplay.textContent = `Total Estimated Cost: $${totalCost.reduce((acc, curVal) => acc + curVal)}`
     })
 }
 
