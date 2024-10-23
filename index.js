@@ -58,7 +58,7 @@ const logSubmit =  function(e) {
         unit: e.target.unit.value,
         price: e.target.price.value,
         notes: e.target.notes.value,
-        isStriked: false,
+        isStriked: false
     }
     fetch(`${baseURL}/groceries`, {
         method: "POST",
@@ -190,7 +190,7 @@ function createNewItem(grocery) {
     const nameSpan = document.createElement("span");
     nameSpan.className = 'nameSpan';
     nameSpan.id = 'nameId'
-    nameSpan.textContent = `${grocery.name}`;
+    nameSpan.textContent = `${capitalizeName(grocery.name)}`;
     // added a strikethrough option
     if (grocery.isStriked) {
         nameSpan.classList.add("strikeName");
@@ -218,17 +218,20 @@ function createNewItem(grocery) {
 
 function totalCost(){
     const costDisplay = document.getElementById('totalCost')
-    let totalCost = 0
+    const totalCost = []
     fetch(`${baseURL}/groceries`).then((resp) => resp.json()).then((data) => {
         for(keys in data){
-            let cost = data[keys].price.slice(1)
-            cost = parseFloat(cost)
-            if(cost > 0) {
-                totalCost += cost
+            let cost = parseFloat(data[keys].price.slice(1))
+            if(cost > 0){
+                totalCost.push(cost)
             }
         }
-        costDisplay.textContent = `Total Cost: $${totalCost}`
+        costDisplay.textContent = `Total Cost: $${totalCost.reduce((acc, curVal) => acc + curVal)}`
     })
+}
+
+function capitalizeName(name) {
+    return name.charAt(0).toUpperCase() + name.slice(1)
 }
 
 const main = () => {
