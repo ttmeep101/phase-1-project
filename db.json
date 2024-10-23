@@ -32,13 +32,13 @@
       "isStriked": false
     },
     {
-      "id": "127b",
       "name": "onion",
       "category": "Produce",
       "unit": "2",
-      "price": "$4",
+      "price": "$5",
       "notes": "for the week",
-      "isStriked": false
+      "isStriked": false,
+      "id": "127b"
     },
     {
       "id": "343b",
@@ -59,13 +59,13 @@
       "isStriked": false
     },
     {
-      "id": "a93b",
       "name": "Carrot",
       "category": "Produce",
       "unit": "3",
       "price": "$12",
       "notes": "expensive",
-      "isStriked": false
+      "isStriked": false,
+      "id": "a93b"
     },
     {
       "name": "Steak",
