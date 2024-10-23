@@ -227,7 +227,7 @@ function totalCost(){
                 totalCost += cost
             }
         }
-        costDisplay.textContent = `Total Cost: $${totalCost}`
+        costDisplay.textContent = `Total Estimated Cost: $${totalCost}`
     })
 }
 
