@@ -41,15 +41,6 @@
       "isStriked": false
     },
     {
-      "id": "5249",
-      "name": "milk",
-      "category": "Dairy",
-      "unit": "6",
-      "price": "$5",
-      "notes": "notes",
-      "isStriked": false
-    },
-    {
       "id": "343b",
       "name": "petfood",
       "category": "Misc",
@@ -86,22 +77,22 @@
       "isStriked": false
     },
     {
-      "name": "blueberry",
+      "name": "Blueberry",
       "category": "Produce",
       "unit": "1",
       "price": "$3",
       "notes": "organic",
-      "id": "103b",
-      "isStriked": false
+      "isStriked": true,
+      "id": "103b"
     },
     {
-      "name": "Chicken",
-      "category": "Meat and Seafood",
+      "id": "568c",
+      "name": "milk",
+      "category": "Dairy",
       "unit": "1",
-      "price": "$2",
-      "notes": "bunch",
-      "isStriked": false,
-      "id": "c7cb"
+      "price": "$3",
+      "notes": "whole milk",
+      "isStriked": false
     }
   ]
 }
