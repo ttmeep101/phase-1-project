@@ -202,7 +202,7 @@ function createNewItem(grocery) {
     });
     const notesSpan = document.createElement("span");
     notesSpan.className = 'notesSpan';
-    notesSpan.textContent = `${grocery.notes}`;
+    notesSpan.textContent = `Note: ${grocery.notes}`;
     const unitSpan = document.createElement("span");
     unitSpan.className = 'unitSpan';
     unitSpan.textContent = `${grocery.unit}`;

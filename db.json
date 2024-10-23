@@ -82,7 +82,7 @@
       "unit": "1",
       "price": "$3",
       "notes": "organic",
-      "isStriked": true,
+      "isStriked": false,
       "id": "103b"
     },
     {
