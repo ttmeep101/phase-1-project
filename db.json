@@ -36,7 +36,7 @@
       "category": "Produce",
       "unit": "2",
       "price": "$5",
-      "notes": "for the week",
+      "notes": "",
       "isStriked": false,
       "id": "127b"
     },
@@ -62,7 +62,7 @@
       "name": "Lemon",
       "category": "Produce",
       "unit": "3",
-      "price": "$3",
+      "price": "$4",
       "notes": "on sale",
       "isStriked": false,
       "id": "a93b"
@@ -106,8 +106,8 @@
     {
       "name": "Black bean",
       "category": "Pantry",
-      "unit": "5",
-      "price": "$1",
+      "unit": "6",
+      "price": "$4",
       "notes": "canned, goya",
       "isStriked": false,
       "id": "229a"

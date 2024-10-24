@@ -105,6 +105,7 @@ const logEdit = function(e, grocery, itemLi){
 }
 
 function editItem(grocery, itemLi) {
+    window.scrollTo(0, 0)
     newItemContainer.style.display = "none";
     editItemContainer.style.display = 'flex';
     addItemBtn.innerText = 'Close Form';
