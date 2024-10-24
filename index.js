@@ -222,8 +222,9 @@ function totalCost(){
     fetch(`${baseURL}/groceries`).then((resp) => resp.json()).then((data) => {
         for(keys in data){
             let cost = parseFloat(data[keys].price.slice(1))
+            let unit = parseInt(data[keys].unit)
             if(cost > 0){
-                totalCost.push(cost)
+                totalCost.push(cost*unit)
             }
         }
         costDisplay.textContent = `Total Estimated Cost: $${totalCost.reduce((acc, curVal) => acc + curVal)}`
