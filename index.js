@@ -225,7 +225,7 @@ function totalCost(){
         for(keys in data){
             let cost = parseFloat(data[keys].price.slice(1))
             let unit = parseInt(data[keys].unit)
-            if(cost > 0){
+            if(cost > 0 && unit > 0){
                 totalCost.push(cost*unit)
             }
         }
