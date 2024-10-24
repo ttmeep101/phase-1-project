@@ -159,6 +159,7 @@ function deleteItem(id) {
     })
     .then((resp) => resp.json())
     .then(() => {});
+    totalCost()
 }
 
 function patchItem(grocery) {

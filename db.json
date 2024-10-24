@@ -36,18 +36,9 @@
       "category": "Produce",
       "unit": "2",
       "price": "$5",
-      "notes": "",
+      "notes": "for the week",
       "isStriked": false,
       "id": "127b"
-    },
-    {
-      "id": "343b",
-      "name": "petfood",
-      "category": "Misc",
-      "unit": "2",
-      "price": "$6",
-      "notes": "for the week",
-      "isStriked": false
     },
     {
       "id": "343c",
@@ -61,8 +52,8 @@
     {
       "name": "Lemon",
       "category": "Produce",
-      "unit": "3",
-      "price": "$4",
+      "unit": "4",
+      "price": "$3",
       "notes": "on sale",
       "isStriked": false,
       "id": "a93b"
@@ -106,20 +97,20 @@
     {
       "name": "Black bean",
       "category": "Pantry",
-      "unit": "6",
-      "price": "$4",
+      "unit": "5",
+      "price": "$1",
       "notes": "canned, goya",
       "isStriked": false,
       "id": "229a"
     },
     {
-      "id": "d9bb",
       "name": "paper towel",
       "category": "Misc",
-      "unit": "1",
+      "unit": "4",
       "price": "$10",
       "notes": "bounty",
-      "isStriked": false
+      "isStriked": false,
+      "id": "d9bb"
     }
   ]
 }
