@@ -41,42 +41,6 @@
       "id": "127b"
     },
     {
-      "id": "343c",
-      "name": "Flour",
-      "category": "Pantry",
-      "unit": "3",
-      "price": "$6",
-      "notes": "for the week",
-      "isStriked": false
-    },
-    {
-      "name": "Lemon",
-      "category": "Produce",
-      "unit": "4",
-      "price": "$3",
-      "notes": "on sale",
-      "isStriked": false,
-      "id": "a93b"
-    },
-    {
-      "name": "Steak",
-      "category": "Meat and Seafood",
-      "unit": "1",
-      "price": "$12",
-      "notes": "tbone",
-      "id": "523a",
-      "isStriked": false
-    },
-    {
-      "name": "strawberry",
-      "category": "Produce",
-      "unit": "1",
-      "price": "$3",
-      "notes": "organic",
-      "isStriked": false,
-      "id": "103b"
-    },
-    {
       "id": "568c",
       "name": "milk",
       "category": "Dairy",
@@ -84,33 +48,6 @@
       "price": "$3",
       "notes": "whole milk",
       "isStriked": false
-    },
-    {
-      "id": "ce78",
-      "name": "Cheese",
-      "category": "Dairy",
-      "unit": "1",
-      "price": "$3",
-      "notes": "cheddar block",
-      "isStriked": false
-    },
-    {
-      "name": "Black bean",
-      "category": "Pantry",
-      "unit": "5",
-      "price": "$1",
-      "notes": "canned, goya",
-      "isStriked": false,
-      "id": "229a"
-    },
-    {
-      "name": "paper towel",
-      "category": "Misc",
-      "unit": "4",
-      "price": "$10",
-      "notes": "bounty",
-      "isStriked": false,
-      "id": "d9bb"
     }
   ]
 }
