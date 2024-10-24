@@ -158,8 +158,7 @@ function deleteItem(id) {
         method: "DELETE",
     })
     .then((resp) => resp.json())
-    .then(() => {});
-    totalCost()
+    .then(() => {totalCost()});
 }
 
 function patchItem(grocery) {
@@ -182,7 +181,6 @@ function editItemBtn(grocery, newItemLi) {
     editBtn.addEventListener('click', (e) => editItem(grocery, newItemLi))
     newItemLi.append(editBtn)
 }
-
 
 function createNewItem(grocery) {
     const categoryIdFinder = grocery.category.replaceAll(' ', '-');
