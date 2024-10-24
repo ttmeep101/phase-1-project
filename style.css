@@ -15,7 +15,7 @@ h1 {
     font-family: "Purple Purse", serif; 
     text-align: center; 
     color: #264348; 
-    font-size: 75px; 
+    font-size: 90px; 
     margin: 30px 0; 
 }
 
@@ -82,7 +82,7 @@ h2 {
 
 /* List Container */
 #container {
-    max-width: 800px; 
+    max-width: 1200px; 
     margin: 0 auto; 
     padding: 20px; 
 }
@@ -136,7 +136,7 @@ h2 {
 
 #totalCost {
     text-align:right;
-    margin-right: 25%;
+    margin-right: 20%;
     color: #264348;
     font-size: 30px;
 }
